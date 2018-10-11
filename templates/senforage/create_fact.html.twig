@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% form_theme formFacture 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<marquee behavior="alternate">
+<h1>EDITION DE FACTURES !</h1>
+</marquee>
+
+<div style="margin-top: 80px;" class="container col-md-6 col-sm-12 col-xs-12 col-lg-6 col-md-offset-3"> 
+    <div class="panel panel-primary">
+        {{ form_start(formFacture) }}
+        {{form_row(formFacture.abonne)}}
+        {{form_row(formFacture.num_compteur, {'attr' : {'placeholder': "numéro du compteur de l'abonné"}})}}
+         {{form_row(formFacture.nom_abn, {'attr' : {'placeholder': "nom de l'abonné"}})}}
+        {{form_row(formFacture.date_facture, {'attr' : {'placeholder': "date de la facture"}})}}
+        {{form_row(formFacture.anc_consommation, {'attr' : {'placeholder': "consommation ancienne facture"}})}}
+        {{form_row(formFacture.nouv_consommation, {'attr' : {'placeholder': "consommation nouvelle facture"}})}}
+        {{form_row(formFacture.solde, {'attr' : {'placeholder': "solde de la facture"}})}}
+        {{form_row(formFacture.solde_anterieur, {'attr' : {'placeholder': "solde factures impayées"}})}}
+        {{form_row(formFacture.total_facture, {'attr' : {'placeholder': "Net à payé"}})}}
+        {{form_row(formFacture.date_limite_paiement, {'attr' : {'placeholder': "date limite de paiement"}})}}
+        
+
+        <button type="submit" class = "btn btn-success">
+                Ajouter la facture
+        </button>
+        {{ form_end(formFacture) }}
+
+    </div>
+</div>
+
+{% endblock %} 

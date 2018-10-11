@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    <section class="abonnes">
+        {% for abonne in abonnes %}
+            <abonne>
+            <h2>{{abonne.nom_abn}}</h2>
+            <a href = "{{path('abonne_show')}}" class = "btn btn-primary">Lire la suite</a>
+
+            </abonne>  
+        {% endfor %}
+    </section>
+
+{% endblock %}

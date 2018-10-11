@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% form_theme formAbonne 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<marquee behavior="alternate">
+<h1>AJOUT D'ABONNEES !</h1>
+</marquee>
+
+<div style="margin-top: 80px;" class="container col-md-6 col-sm-12 col-xs-12 col-lg-6 col-md-offset-3"> 
+    <div class="panel panel-primary">
+        {{ form_start(formAbonne) }}
+        {{form_row(formAbonne.cin, {'attr' : {'placeholder': "numéro de la carte d'identité nationale"}})}}
+         {{form_row(formAbonne.num_compteur, {'attr' : {'placeholder': "numéro du compteur de l'abonné"}})}}
+        {{form_row(formAbonne.nom_abn, {'attr' : {'placeholder': "nom de l'abonné"}})}}
+        {{form_row(formAbonne.nom_village, {'attr' : {'placeholder': "village de l'abonné"}})}}
+        {{form_row(formAbonne.nom_chef, {'attr' : {'placeholder': "nom chef du village de l'abonné"}})}}
+        {{form_row(formAbonne.nom_quartier, {'attr' : {'placeholder': "quartier de l'abonné"}})}}
+        {{form_row(formAbonne.num_tel, {'attr' : {'placeholder': "numéro tel de l'abonné"}})}}
+        {{form_row(formAbonne.libelle_abn, {'attr' : {'placeholder': "libellé de l'abonnement"}})}}
+        {{form_row(formAbonne.date_abn, {'attr' : {'placeholder': "date de l'abonnement"}})}}
+        {{form_row(formAbonne.frais_abn, {'attr' : {'placeholder': "frais de l'abonnement"}})}}
+
+        <button type="submit" class = "btn btn-success">
+            
+                Ajouter l'abonné
+        
+        </button>
+        {{ form_end(formAbonne) }}
+
+    </div>
+</div>
+
+{% endblock %} 
+

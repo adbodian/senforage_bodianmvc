@@ -1,0 +1,14 @@
+body
+    {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+.diaporama1
+    {
+        margin: 0 auto;
+        width: 960px;
+        height: 500px;
+        border: 3px solid #333;
+        background-image: url("images/image4.jpg")
+    }
